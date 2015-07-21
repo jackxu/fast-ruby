@@ -235,7 +235,20 @@ Comparison:
            Array#[0]:  8613583.7 i/s
          Array#first:  7464526.6 i/s - 1.15x slower
 ```
+```
+> ruby -v code/array/array-+-vs-concat.rb
+ruby 2.1.4p265 (2014-10-27 revision 48166) [x86_64-darwin14.0]
+Calculating -------------------------------------
+             Array#+    70.916k i/100ms
+        Array#concat    62.433k i/100ms
+-------------------------------------------------
+             Array#+      1.820M (± 5.5%) i/s -      9.077M
+        Array#concat      1.705M (± 6.2%) i/s -      8.491M
 
+Comparison:
+             Array#+:  1819615.5 i/s
+        Array#concat:  1704666.5 i/s - 1.07x slower
+```
 ##### `Array#[](-1)` vs `Array#last` [code](code/array/array-last-vs-index.rb)
 
 ```
